@@ -12,7 +12,7 @@ async function createMigrationTable(sequelize) {
         },
         date: {
             type: sequelize_typescript_1.DataType.DATE,
-            defaultValue: sequelize_typescript_1.Sequelize.fn("now"),
+            defaultValue: sequelize_typescript_1.Sequelize.fn("NOW"),
         },
     });
     await queryInterface.createTable("SequelizeMigrationsMeta", {
@@ -32,7 +32,7 @@ async function createMigrationTable(sequelize) {
         },
         date: {
             type: sequelize_typescript_1.DataType.DATE,
-            defaultValue: sequelize_typescript_1.Sequelize.fn("now"),
+            defaultValue: sequelize_typescript_1.Sequelize.fn("NOW"),
         },
     });
 }

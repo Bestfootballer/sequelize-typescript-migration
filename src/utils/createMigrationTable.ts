@@ -1,6 +1,6 @@
 import {
-  DataType as SequelizeTypescriptDataType,
   Sequelize,
+  DataType as SequelizeTypescriptDataType,
 } from "sequelize-typescript";
 
 export default async function createMigrationTable(sequelize: Sequelize) {
@@ -15,7 +15,7 @@ export default async function createMigrationTable(sequelize: Sequelize) {
     },
     date: {
       type: SequelizeTypescriptDataType.DATE,
-      defaultValue: Sequelize.fn("now"),
+      defaultValue: Sequelize.fn("NOW"),
     },
   });
   await queryInterface.createTable("SequelizeMigrationsMeta", {
@@ -35,7 +35,7 @@ export default async function createMigrationTable(sequelize: Sequelize) {
     },
     date: {
       type: SequelizeTypescriptDataType.DATE,
-      defaultValue: Sequelize.fn("now"),
+      defaultValue: Sequelize.fn("NOW"),
     },
   });
 }
